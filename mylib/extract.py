@@ -27,7 +27,7 @@ def extract(
         os.mkdir("../Alex_Ackerman_Mini_Project_5/Data")
         os.chdir("../Alex_Ackerman_Mini_Project_5/Data")
 
-    with requests.get(url, timeout=5) as r:
+    with requests.get(url, timeout=100) as r:
         with open(filepath, "wb") as f:
             f.write(r.content)
     print(filepath)
