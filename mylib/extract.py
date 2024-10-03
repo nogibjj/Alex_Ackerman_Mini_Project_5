@@ -18,14 +18,14 @@ def extract(
     filepath="ks-projects-201801.csv",
 ):
     if os.path.exists(
-        "../Alex_Ackerman_Mini_Project_5/Data"
+        "Data"
         # )
         #     "/Users/alexackerman/Library/CloudStorage/OneDrive-Personal/MIDS/Data Engineering/Alex_Ackerman_Mini_Project_5/mylib"
     ):
-        os.chdir("../Alex_Ackerman_Mini_Project_5/Data")
+        os.chdir("Data")
     else:
-        os.mkdir("../Alex_Ackerman_Mini_Project_5/Data")
-        os.chdir("../Alex_Ackerman_Mini_Project_5/Data")
+        os.mkdir("Data")
+        os.chdir("Data")
 
     with requests.get(url, timeout=100) as r:
         with open(filepath, "wb") as f:
