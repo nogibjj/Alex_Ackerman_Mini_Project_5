@@ -5,10 +5,13 @@ Transforms and loads data to local SQLite3 database with custom schema
 import sqlite3
 import csv
 
+# Alex_Ackerman_Mini_Project_5/Data/ks-projects-201801.csv
+# /Users/alexackerman/Library/CloudStorage/OneDrive-Personal/MIDS/Data Engineering/Alex_Ackerman_Mini_Project_5/mylib/transform_load.py
+# /Users/alexackerman/Library/CloudStorage/OneDrive-Personal/MIDS/Data Engineering/Alex_Ackerman_Mini_Project_5/main.py
+# /Users/alexackerman/Library/CloudStorage/OneDrive-Personal/MIDS/Data Engineering/Alex_Ackerman_Mini_Project_5/Data/ks-projects-201801.csv
 
-def load(
-    dataset="Data/ks-projects-201801.csv",
-):
+
+def load(dataset="Data/ks-projects-201801.csv"):
     # Open the CSV file
     payload = csv.reader(open(dataset, newline="", encoding="utf-8"), delimiter=",")
     # print(*payload)

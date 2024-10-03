@@ -32,4 +32,7 @@ def main_result():
     return results
 
 
-main_result()
+# main_result()
+
+if __name__ == "__main__":
+    main_result()

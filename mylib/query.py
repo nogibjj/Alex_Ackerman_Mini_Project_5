@@ -3,7 +3,7 @@ import sqlite3
 
 # Function to insert a new project into the kickstarter table
 def queryCreate():
-    conn = sqlite3.connect("kickstarter.db")
+    conn = sqlite3.connect("Data/kickstarter.db")
     cursor = conn.cursor()
     # Insert execution (example project details provided)
     cursor.execute(
@@ -19,7 +19,7 @@ def queryCreate():
 
 # Function to read data from the kickstarter table
 def queryRead():
-    conn = sqlite3.connect("kickstarter.db")
+    conn = sqlite3.connect("Data/kickstarter.db")
     cursor = conn.cursor()
     # Read execution
     cursor.execute("SELECT * FROM kickstarter LIMIT 10")
@@ -31,7 +31,7 @@ def queryRead():
 
 # Function to update an entry in the kickstarter table
 def queryUpdate():
-    conn = sqlite3.connect("kickstarter.db")
+    conn = sqlite3.connect("Data/kickstarter.db")
     cursor = conn.cursor()
     # Update execution (updating an example project)
     cursor.execute("UPDATE kickstarter SET pledged = 6000 WHERE ID = 1")
@@ -42,7 +42,7 @@ def queryUpdate():
 
 # Function to delete an entry from the kickstarter table
 def queryDelete():
-    conn = sqlite3.connect("kickstarter.db")
+    conn = sqlite3.connect("Data/kickstarter.db")
     cursor = conn.cursor()
     # Delete execution
     cursor.execute("DELETE FROM kickstarter WHERE ID = 1")
